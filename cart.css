@@ -115,6 +115,7 @@ body {
 .items {
   padding: 20px;
   flex: 1;
+  overflow-y: auto;
   background: #ffffff;
 }
 
@@ -402,6 +403,104 @@ body {
     justify-content: center;
   }
 }
+/* === Плавна адаптація і симетрія Voucher + Total === */
+
+.voucher-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: clamp(8px, 2vw, 20px);
+  transition: all 0.3s ease;
+}
+
+/* Однакові параметри для обох елементів */
+.voucher,
+.total {
+  flex: 1 1 48%;
+  height: clamp(44px, 4vw, 60px);
+  font-size: clamp(12px, 1.2vw, 16px);
+  border-radius: clamp(8px, 1vw, 10px);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Voucher */
+.voucher {
+  border: 2.5px solid #ffffff;
+  background-color: transparent;
+  color: #f4f4f4;
+  font-family: Montserrat;
+  font-weight: 500;
+  padding: 0 10px;
+  line-height: normal;
+}
+
+/* Total */
+.total {
+  background-color: #ff4200;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  gap: 6px;
+  font-family: Montserrat;
+}
+
+/* === Гарний вигляд у колоночку на вузьких екранах === */
+@media (max-width: 370px) {
+  .voucher-total {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .voucher,
+  .total {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 9px;
+  }
+
+  .voucher::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+/* === Гарне вертикальне вирівнювання Voucher + Total на вузьких екранах === */
+@media (max-width: 350px) {
+  .voucher-total {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .voucher,
+  .total {
+    width: 100%;           /* Трішки ширше */
+    max-width: 360px;       /* Не виходить за межі */
+    height:60           /* Гарна висота */
+
+  }
+
+  .voucher::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 
 
 
