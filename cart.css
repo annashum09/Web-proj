@@ -1,16 +1,16 @@
 body {
-  background: #a19f9f;
+  
   font-family: Arial, sans-serif;
-  display: flex;
   justify-content: center;
-  padding: 20px;
+  margin: 0;
+  
 }
 
 .phone {
-  border-radius: 40px;
   background: #FFF;
-  height: 780px;
-  width: 393px; ;
+  height: 100vh;
+  width: 100%;
+  min-width: 350px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -120,6 +120,7 @@ body {
 
 .item {
   display: flex;
+  overflow-y: auto;
   align-items: center;
   background: #f7f7f7;
   border-radius: 12px;
@@ -222,11 +223,10 @@ body {
 .cart-footer {
   border-radius: 20px;
   background: #211033;
-  height: 390px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  margin-top: -15px;
+  
  
 }
 
@@ -382,17 +382,14 @@ body {
 @media (min-width: 900px) {
 
   body {
-    background: #e5e5e5;
-    padding: 60px;
-    display: flex;
-    justify-content: center;
+
   }
 
   .phone {
-    width: 1000px;
+    max-width: 1500px;
     height: auto;
     border-radius: 24px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    justify-self:center;
   }
 
   .items {
@@ -401,7 +398,7 @@ body {
 
   /* VOUCHER + TOTAL — однакові по розміру */
   .voucher-total {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
