@@ -368,7 +368,7 @@ body {
     flex: 1;
     max-width: 48%;
     height: 42px;
-    font-size: 13px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,7 +382,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
   }
 
@@ -445,7 +445,7 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  gap: 6px;
+  gap: 2px;
   font-family: Montserrat;
 }
 
@@ -484,7 +484,9 @@ body {
   .total {
     width: 100%;           /* Трішки ширше */
     max-width: 360px;       /* Не виходить за межі */
-    height:60           /* Гарна висота */
+    height:60px; 
+    gap: 5px;
+    font-size:14px;          /* Гарна висота */
 
   }
 
