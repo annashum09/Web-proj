@@ -210,6 +210,7 @@
         }
       });
     }
+    
 
     function attachCheckoutHandlers() {
       document.querySelector(".checkout").addEventListener("click", () => {
@@ -227,6 +228,30 @@
       attachCheckoutHandlers();
       renderTotal();
     });
+    // === Просте дублювання всіх товарів при малому екрані ===
+document.addEventListener("DOMContentLoaded", () => {
+  const itemsList = document.querySelector(".items");
+  const allItems = Array.from(itemsList.querySelectorAll(".item"));
+  
+  function duplicateOnce() {
+    const clones = itemsList.querySelectorAll(".clone-item");
+    if (window.innerWidth <= 360 && clones.length === 0) {
+      allItems.forEach(item => {
+        const copy = item.cloneNode(true);
+        copy.classList.add("clone-item");
+        itemsList.appendChild(copy);
+      });
+    }
+    if (window.innerWidth > 350 && clones.length > 0) {
+      clones.forEach(c => c.remove());
+    }
+  }
+
+  duplicateOnce();
+  window.addEventListener("resize", duplicateOnce);
+});
+
+
   </script>
 </body>
 </html>

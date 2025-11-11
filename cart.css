@@ -3,15 +3,19 @@ body {
   font-family: Arial, sans-serif;
   justify-content: center;
   margin: 0;
-  
+  height: 100%;
+  overflow-x: hidden;
 }
+  
+
 
 .phone {
-  background: #FFF;
   height: 100vh;
   width: 100%;
   min-width: 350px;
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -114,9 +118,10 @@ body {
 /* Товари */
 .items {
   padding: 20px;
-  flex: 1;
+  flex: 1 1 auto;
   overflow-y: auto;
   background: #ffffff;
+  
 }
 
 .item {
@@ -167,6 +172,7 @@ body {
   top: -13px;
   left: 6px;
 }
+
 
 .price {
   border: 2.0px solid #ff4e36;
@@ -222,15 +228,19 @@ body {
 
 /* Нижня частина (кошик) */
 .cart-footer {
-  border-top-left-radius:20px;
- border-top-right-radius:20px;
   background: #211033;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   padding: 16px;
   display: flex;
   flex-direction: column;
+  z-index: 10;
+  bottom: 0;
+  left: 0; /* або більше, щоб виглядало пропорційно */
+}
   
  
-}
+
 
 /* Верхній рядок у футері */
 .voucher-total {
@@ -471,22 +481,23 @@ body {
   }
 }
 /* === Гарне вертикальне вирівнювання Voucher + Total на вузьких екранах === */
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .voucher-total {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    width: 100%;
+    
   }
 
   .voucher,
   .total {
     width: 100%;           /* Трішки ширше */
     max-width: 360px;       /* Не виходить за межі */
-    height:60px; 
+    height:50px; 
     gap: 5px;
-    font-size:14px;          /* Гарна висота */
+    font-size:14px;  
+    text-align: center;        /* Гарна висота */
 
   }
 
