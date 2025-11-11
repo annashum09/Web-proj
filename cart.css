@@ -8,16 +8,15 @@ body {
 }
   
 .phone {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  min-width: 320px;
+  min-width: 350px;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  
 }
 
 /* Верхня панель */
@@ -116,11 +115,9 @@ body {
 /* Товари */
 .items {
   padding: 20px;
+  flex: 1 1 auto;
   overflow-y: auto;
   background: #ffffff;
-  flex: 1;
-  overflow-y: auto;
-  
   
 }
 
@@ -234,7 +231,9 @@ body {
   padding: 16px;
   display: flex;
   flex-direction: column;
- 
+  z-index: 10;
+  bottom: 0;
+  left: 0; /* або більше, щоб виглядало пропорційно */
 }
   
  
@@ -354,46 +353,34 @@ body {
 .paypal:hover img {
   filter: brightness(0) invert(1); 
 }
-/* === МОБІЛЬНА ВЕРСІЯ — ДО 320px === */
-@media screen and (max-width: 320px) {
-  /* Футер трохи вище і з більшими відступами */
-  .cart-footer {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-bottom: 18px;
+/* ==== ФІКС TOTAL, ЩОБ НЕ ВИЛАЗИВ НА 380PX ==== */
+@media (max-width: 400px) {
+  .voucher-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
   }
 
-  /* Блок ваучера і тоталу — вертикально, симетрично */
-  .voucher-total {
-    flex-direction: column;
+  .voucher {
+    flex: 1;
+    height: 42px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .total {
+    flex: 1;
+    max-width: 48%;
+    height: 42px;
+    font-size: 14px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 14px;
-    width: 100%;
-  }
-
-  /* Ваучер і тотал більші, зручні для торкання */
-  .voucher,
-  .total {
-    width: 100%;
-    height: 62px;
-    font-size: 16px;
-    border-radius: 12px;
-  }
-
-  .voucher::placeholder {
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .total {
-    background-color: #ff4200;
-    justify-content: center;
-    font-weight: 800;
-    letter-spacing: 0.3px;
   }
 }
-
 
 
 /* Десктоп ~1500px */
@@ -431,7 +418,7 @@ body {
   justify-content: space-between;
   width: 100%;
   gap: clamp(8px, 2vw, 20px);
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 /* Однакові параметри для обох елементів */
@@ -470,7 +457,7 @@ body {
 }
 
 /* === Гарний вигляд у колоночку на вузьких екранах === */
-@media (max-width: 360px) {
+@media (max-width: 370px) {
   .voucher-total {
     flex-direction: column;
     align-items: stretch;
@@ -491,7 +478,7 @@ body {
   }
 }
 /* === Гарне вертикальне вирівнювання Voucher + Total на вузьких екранах === */
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .voucher-total {
     flex-direction: column;
     align-items: center;
@@ -504,7 +491,7 @@ body {
   .total {
     width: 100%;           /* Трішки ширше */
     max-width: 360px;       /* Не виходить за межі */
-    height:60px; 
+    height:50px; 
     gap: 5px;
     font-size:14px;  
     text-align: center;        /* Гарна висота */
