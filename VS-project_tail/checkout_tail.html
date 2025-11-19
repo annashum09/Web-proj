@@ -10,26 +10,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
 
-  /* Apple Pay*/
-  .applePayBtn:hover .appleLogo {
-    filter: invert(1);
-  }
+    /* Apple Pay*/
+    .applePayBtn:hover .appleLogo {
+      filter: invert(1);
+    }
 
-  /* Google Pay*/
-  .googlePayBtn:hover .googleLogo {
-    filter: brightness(0) invert(1);
-  }
+    /* Google Pay*/
+    .googlePayBtn:hover .googleLogo {
+      filter: brightness(0) invert(1);
+    }
 
-  /* Текст білий при hover */
-  .applePayBtn:hover .appleText,
-  .googlePayBtn:hover .googleText {
-    color: white;
-  }
-</style>
+    /* Текст білий при hover */
+    .applePayBtn:hover .appleText,
+    .googlePayBtn:hover .googleText {
+      color: white;
+    }
+  </style>
 
 </head>
 
@@ -37,17 +37,17 @@
 
   <div class="max-w-5xl mx-auto px-4 py-10 relative">
 
-    <!-- BACK BUTTON з норм відступами -->
+    <!-- BACK BUTTON без px у класах -->
     <button
-  type="button"
-  aria-label="Back to cart"
-  class="fixed top-6 left-6 w-[28px] h-[28px] bg-[#f7f7f7] rounded-[8px]
-         flex items-center justify-center text-[20px] cursor-pointer transition
-         leading-[1px]
-         hover:bg-[#bebebe] hover:text-white z-50 shadow-sm"
-  onclick="window.location.href='cart_tail.html'">
-  <i class="fi fi-rr-angle-small-left"></i>
-</button>
+      type="button"
+      aria-label="Back to cart"
+      class="fixed top-6 left-6 w-7 h-7 bg-[#f7f7f7] rounded-lg
+             flex items-center justify-center text-xl cursor-pointer transition
+             leading-none
+             hover:bg-[#bebebe] hover:text-white z-50 shadow-sm"
+      onclick="window.location.href='cart_tail.html'">
+      <i class="fi fi-rr-angle-small-left"></i>
+    </button>
 
     <!-- LOGO -->
     <div class="flex justify-center mb-9">
@@ -88,39 +88,35 @@
           <!-- Pay with Card -->
           <div class="bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center cursor-pointer
             transition duration-150 hover:bg-[#2b2b2b] hover:text-white active:scale-95">
-  Pay with Card
-</div>
-
+            Pay with Card
+          </div>
 
           <!-- Apple Pay -->
           <div class="applePayBtn bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center gap-2 cursor-pointer
             transition duration-150 hover:bg-black active:scale-95">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="h-5 appleLogo">
-    <span class="appleText">Apple Pay</span>
-</div>
-
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="h-5 appleLogo" alt="Apple logo">
+            <span class="appleText">Apple Pay</span>
+          </div>
 
           <!-- Google Pay -->
-          <div class="googlePayBtn bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center  cursor-pointer
+          <div class="googlePayBtn bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center cursor-pointer
             transition duration-150 hover:bg-blue-500 active:scale-95">
-    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" class="h-7 googleLogo">
-    <span class="googleText">Google Pay</span>
-</div>
-
+            <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" class="h-7 googleLogo" alt="Google Pay logo">
+            <span class="googleText">Google Pay</span>
+          </div>
 
         </div>
 
-        <button class="w-full h-14 bg-black text-white text-black font-bold rounded-xl mt-6 transition
+        <button class="w-full h-14 bg-black text-white font-bold rounded-xl mt-6 transition
                        hover:bg-white hover:text-black hover:shadow-lg active:scale-95">
           Confirm Order
-          
         </button>
 
       </div>
 
       <!-- RIGHT SUMMARY -->
       <div>
-        <div class="bg-#211033 rounded-3xl p-6 space-y-6"style="background-color: #211033; color: white;">
+        <div class="rounded-3xl p-6 space-y-6 bg-[#211033] text-white">
           <h2 class="text-xl font-bold mb-4">Your Order</h2>
 
           <div class="space-y-4">
@@ -138,7 +134,7 @@
               <img src="https://wafuu.com/cdn/shop/products/sony-walkman-s-series-4gb-mp3-player-with-bluetooth-nw-s313-black-229654_1080x.jpg?v=1706145115" class="w-16 h-16 rounded-xl" alt="Walkman">
               <div class="flex-1">
                 <p class="font-semibold">Walkman</p>
-                <p class="text-sm ttext-white/70">Code #367381 | Quantity: 1</p>
+                <p class="text-sm text-white/70">Code #367381 | Quantity: 1</p>
               </div>
               <p class="font-semibold">$249.90</p>
             </div>
@@ -168,7 +164,6 @@
           <div class="flex justify-between text-lg font-semibold">
             <span>Total</span>
             <span>$2648.60</span>
-            
           </div>
 
         </div>

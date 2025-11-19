@@ -40,30 +40,30 @@
     }
     @media (max-width: 360px) {
 
-  .voucher-total {
-    flex-direction: column;
-    gap: 10px !important;
-  }
+      .voucher-total {
+        flex-direction: column;
+        gap: 10px !important;
+      }
 
-  .voucher-total input,
-  .voucher-total .total {
-    width: 100% !important;
-  }
+      .voucher-total input,
+      .voucher-total .total {
+        width: 100% !important;
+      }
 
-  .voucher {
-    font-size: 14px !important;
-    height: 48px !important;
-  }
+      .voucher {
+        font-size: 14px !important;
+        height: 48px !important;
+      }
 
-  .total {
-    font-size: 15px !important;
-    height: 48px !important;
-  }
+      .total {
+        font-size: 15px !important;
+        height: 48px !important;
+      }
 
-  .cart-footer {
-    padding: 12px !important;
-  }
-}
+      .cart-footer {
+        padding: 12px !important;
+      }
+    }
   </style>
 </head>
 
@@ -71,14 +71,14 @@
   <div class="phone w-full h-screen flex flex-col justify-between shadow-xl overflow-x-hidden overflow-y-auto">
 
     <!-- HEADER -->
-    <header class="relative flex items-center justify-between px-[17px] py-[17px] bg-white">
+    <header class="relative flex items-center justify-between px-4 py-4 bg-white">
 
       <!-- Back -->
       <button 
-        class="w-[28px] h-[28px] bg-[#f7f7f7] rounded-[30%] flex justify-center items-center 
-               text-[22px] leading-[1px] cursor-pointer transition hover:bg-[#bebebe] hover:text-white"
+        class="w-7 h-7 bg-[#f7f7f7] rounded-[30%] flex justify-center items-center 
+               text-xl leading-2 cursor-pointer transition hover:bg-[#bebebe] hover:text-white"
         onclick="window.location.href">
-          <i class="fi fi-rr-angle-small-left text-[20px] leading-[1px]"></i>
+          <i class="fi fi-rr-angle-small-left text-xl leading-none"></i>
       </button>
 
       <h2 class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-black font-semibold text-sm">
@@ -88,50 +88,48 @@
       <!-- Cart -->
       <div class="relative inline-flex items-center justify-center">
         <div
-          class="bg-[#f7f7f7] rounded-[30%] w-[29px] h-[29px] flex items-center justify-center
-                 text-[15px] -translate-x-[13px] leading-[3px] transition cursor-pointer
+          class="bg-[#f7f7f7] rounded-[30%] w-7 h-7 flex items-center justify-center
+                 text-sm -translate-x-3.5 leading-tight transition cursor-pointer
                  hover:bg-[#bebebe] hover:text-white">
-          <i class="fi fi-rs-shopping-cart text-[15px] leading-[1px]"></i>
+          <i class="fi fi-rs-shopping-cart text-sm leading-none"></i>
         </div>
 
         <span id="cartCount"
-              class="cart-count bg-[#ff4e36] text-white rounded-full w-[22px] h-[22px]
-                     flex items-center justify-center text-[13px] font-semibold leading-[1px] -translate-x-[16px] -translate-y-[10.5px]">
-                     4
+              class="cart-count bg-[#ff4e36] text-white rounded-full w-5 h-5
+                     flex items-center justify-center text-xs font-semibold leading-none -translate-x-4 -translate-y-2.5">
+          4
         </span>
       </div>
 
     </header>
-
-    <main class="items p-5 flex-1 overflow-y-auto bg-white">
+<main class="items p-5 flex-1 overflow-y-auto bg-white space-y-2.5">
 
   <!-- ITEM 1 -->
-  <div class="item flex items-center bg-[#f7f7f7] rounded-[12px] p-3 mb-2 h-[100px]" data-price="849.90">
+  <div class="item flex items-center bg-[#f7f7f7] rounded-xl px-3 py-2 mb-2.5" data-price="849.90">
+    <img
+      src="https://m.media-amazon.com/images/I/61zPdK3k2rL._AC_SX679_.jpg"
+      class="w-16 h-16 rounded-xl mr-3 object-cover"
+      alt="Video Camera"
+    />
 
-    <img src="https://m.media-amazon.com/images/I/61zPdK3k2rL._AC_SX679_.jpg"
-         class="w-[70px] h-[70px] rounded-[10px] mr-3" alt="Video Camera">
-
-    <div class="info flex flex-col justify-center">
-
-      <h3 class="text-black font-semibold text-[14px] leading-none mt-[2px] ml-[4px]">
+    <div class="info flex flex-col justify-center flex-1 gap-1">
+      <h3 class="text-sm font-semibold text-black leading-none">
         Video Camera
       </h3>
-
-      <p class="text-[#A5A5A5] text-[9px] font-semibold leading-none ml-[4px] mt-[2px]">
+      <p class="text-xs text-[#A5A5A5] leading-none">
         Code #247890
       </p>
 
-     <span class="inline-flex whitespace-nowrap border-[2px] border-[#ff4e36] text-[#ff3318]
-             px-[10px] py-[3px] rounded-[23px] font-extrabold text-[12px]
-             ml-[4px] mt-[4px] w-[80px]">
-  $ 849.90
-</span>
+      <span class="inline-flex items-center justify-center whitespace-nowrap
+                   border-2 border-[#ff4e36] text-[#ff3318]
+                   px-2.5 py-1 rounded-full font-extrabold text-xs w-20">
+        $ 849.90
+      </span>
     </div>
 
-    <div class="controls flex items-center gap-[4px] ml-auto">
-
+    <div class="controls flex items-center gap-1 ml-auto">
       <button class="minus" aria-label="decrease">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor"
                 d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor"
@@ -139,10 +137,10 @@
         </svg>
       </button>
 
-      <span class="qty text-[15px] font-semibold text-center w-[22px]">1</span>
+      <span class="qty text-sm font-semibold text-center w-6">1</span>
 
       <button class="plus" aria-label="increase">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor"
                 d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor"
@@ -151,189 +149,176 @@
                 d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
-
     </div>
-
   </div>
 
   <!-- ITEM 2 -->
-  <div class="item flex items-center bg-[#f7f7f7] rounded-[12px] p-3 mb-2.5 h-[100px]" data-price="249.90">
+  <div class="item flex items-center bg-[#f7f7f7] rounded-xl px-3 py-2 mb-2.5" data-price="249.90">
+    <img
+      src="https://wafuu.com/cdn/shop/products/sony-walkman-s-series-4gb-mp3-player-with-bluetooth-nw-s313-black-229654_1080x.jpg?v=1706145115"
+      class="w-16 h-16 rounded-xl mr-3 object-cover"
+      alt="Walkman"
+    />
 
-    <img src="https://wafuu.com/cdn/shop/products/sony-walkman-s-series-4gb-mp3-player-with-bluetooth-nw-s313-black-229654_1080x.jpg?v=1706145115"
-         class="w-[70px] h-[70px] rounded-[10px] mr-3" alt="Walkman">
-
-    <div class="info flex flex-col justify-center">
-
-      <h3 class="text-black font-semibold text-[14px] leading-none mt-[2px] ml-[4px]">
+    <div class="info flex flex-col justify-center flex-1 gap-1">
+      <h3 class="text-sm font-semibold text-black leading-none">
         Walkman
       </h3>
-
-      <p class="text-[#A5A5A5] text-[9px] font-semibold leading-none ml-[4px] mt-[2px]">
+      <p class="text-xs text-[#A5A5A5]  leading-none">
         Code #367381
       </p>
 
-      <span class="inline-flex border-[2px] border-[#ff4e36] text-[#ff3318]
-                   px-[10px] py-[3px] rounded-[23px] font-extrabold text-[12px]
-                   ml-[4px] mt-[4px]">
+      <span class="inline-flex items-center justify-center whitespace-nowrap
+                   border-2 border-[#ff4e36] text-[#ff3318]
+                   px-2.5 py-1 rounded-full font-extrabold text-xs w-20">
         $ 249.90
       </span>
-
     </div>
 
-    <div class="controls flex items-center gap-[4px] ml-auto">
-
+    <div class="controls flex items-center gap-1 ml-auto">
       <button class="minus" aria-label="decrease">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor" d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
 
-      <span class="qty text-[15px] font-semibold text-center w-[22px]">1</span>
+      <span class="qty text-sm font-semibold text-center w-6">1</span>
 
       <button class="plus" aria-label="increase">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor" d="M480 672V352a32 32 0 1 1 64 0v320a32 32 0 0 1-64 0" />
           <path fill="currentColor" d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
-
     </div>
-
   </div>
 
   <!-- ITEM 3 -->
-  <div class="item flex items-center bg-[#f7f7f7] rounded-[12px] p-3 mb-2.5 h-[100px]" data-price="1449.90">
+  <div class="item flex items-center bg-[#f7f7f7] rounded-xl px-3 py-2 mb-2.5" data-price="1449.90">
+    <img
+      src="https://vinylsound.ca/cdn/shop/products/VINYLSOUND-TECHNICS_SL1210G_GRAND_CLASS_REFERENCE_DIRECT_DRIVE_TURNTABLE_1600x.jpg?v=1656337135"
+      class="w-16 h-16 rounded-xl mr-3 object-cover"
+      alt="Turntable"
+    />
 
-    <img src="https://vinylsound.ca/cdn/shop/products/VINYLSOUND-TECHNICS_SL1210G_GRAND_CLASS_REFERENCE_DIRECT_DRIVE_TURNTABLE_1600x.jpg?v=1656337135"
-         class="w-[70px] h-[70px] rounded-[10px] mr-3" alt="Turntable">
-
-    <div class="info flex flex-col justify-center">
-
-      <h3 class="text-black font-semibold text-[14px] leading-none mt-[2px] ml-[4px]">
+    <div class="info flex flex-col justify-center flex-1 gap-1">
+      <h3 class="text-sm font-semibold text-black leading-none">
         Turntable
       </h3>
-
-      <p class="text-[#A5A5A5] text-[9px] font-semibold leading-none ml-[4px] mt-[2px]">
+      <p class="text-xs text-[#A5A5A5] leading-none">
         Code #589001
       </p>
 
-      <span class="inline-flex border-[2px] border-[#ff4e36] text-[#ff3318]
-                   px-[10px] py-[3px] rounded-[23px] font-extrabold text-[12px]
-                   ml-[4px] mt-[4px]">
+      <span class="inline-flex items-center justify-center whitespace-nowrap
+                   border-2 border-[#ff4e36] text-[#ff3318]
+                   px-2.5 py-1 rounded-full font-extrabold text-xs w-20">
         $ 1449.90
       </span>
-
     </div>
 
-    <div class="controls flex items-center gap-[4px] ml-auto">
-
+    <div class="controls flex items-center gap-1 ml-auto">
       <button class="minus" aria-label="decrease">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor" d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
 
-      <span class="qty text-[15px] font-semibold text-center w-[22px]">1</span>
+      <span class="qty text-sm font-semibold text-center w-6">1</span>
 
       <button class="plus" aria-label="increase">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor" d="M480 672V352a32 32 0 1 1 64 0v320a32 32 0 0 1-64 0" />
           <path fill="currentColor" d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
-
     </div>
-
   </div>
 
   <!-- ITEM 4 -->
-  <div class="item flex items-center bg-[#f7f7f7] rounded-[12px] p-3 mb-2.5 h-[100px]" data-price="99.90">
+  <div class="item flex items-center bg-[#f7f7f7] rounded-xl px-3 py-2 mb-2.5" data-price="99.90">
+    <img
+      src="https://ktr.com.au/wp-content/uploads/2014/08/7950-black-1000x1000.jpg"
+      class="w-16 h-16 rounded-xl mr-3 object-cover"
+      alt="Pager"
+    />
 
-    <img src="https://ktr.com.au/wp-content/uploads/2014/08/7950-black-1000x1000.jpg"
-         class="w-[70px] h-[70px] rounded-[10px] mr-3" alt="Pager">
-
-    <div class="info flex flex-col justify-center">
-
-      <h3 class="text-black font-semibold text-[14px] leading-none mt-[2px] ml-[4px]">
+    <div class="info flex flex-col justify-center flex-1 gap-1">
+      <h3 class="text-sm font-semibold text-black leading-none">
         Pager
       </h3>
-
-      <p class="text-[#A5A5A5] text-[9px] font-semibold leading-none ml-[4px] mt-[2px]">
+      <p class="text-xs text-[#A5A5A5] leading-none">
         Code #567190
       </p>
 
-      <span class="inline-flex border-[2px] border-[#ff4e36] text-[#ff3318]
-                   px-[10px] py-[3px] rounded-[23px] font-extrabold text-[12px]
-                   ml-[4px] mt-[4px]">
+      <span class="inline-flex items-center justify-center whitespace-nowrap
+                   border-2 border-[#ff4e36] text-[#ff3318]
+                   px-3 py-1 rounded-full font-extrabold text-xs w-20">
         $ 99.90
       </span>
-
     </div>
 
-    <div class="controls flex items-center gap-[4px] ml-auto">
-
+    <div class="controls flex items-center gap-1 ml-auto">
       <button class="minus" aria-label="decrease">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor" d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
 
-      <span class="qty text-[15px] font-semibold text-center w-[22px]">1</span>
+      <span class="qty text-sm font-semibold text-center w-6">1</span>
 
       <button class="plus" aria-label="increase">
-        <svg class="w-[30px] h-[30px]" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-8 h-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" d="M352 480h320a32 32 0 1 1 0 64H352a32 32 0 0 1 0-64" />
           <path fill="currentColor" d="M480 672V352a32 32 0 1 1 64 0v320a32 32 0 0 1-64 0" />
           <path fill="currentColor" d="M512 896a384 384 0 1 0 0-768a384 384 0 0 0 0 768m0 64a448 448 0 1 1 0-896a448 448 0 0 1 0 896" />
         </svg>
       </button>
-
     </div>
-
   </div>
 
 </main>
 
 
-    <!-- FOOTER -->
-    <div class="cart-footer bg-[#211033] rounded-t-[20px] p-4 flex flex-col z-10">
 
-      <div class="voucher-total flex items-center justify-between w-full gap-[clamp(8px,2vw,20px)]">
+    <!-- FOOTER -->
+    <div class="cart-footer bg-[#211033] rounded-t-2xl p-4 flex flex-col z-10">
+
+      <div class="voucher-total flex items-center justify-between w-full gap-4">
 
         <input type="text"
                id="voucherInput"
-               class="voucher flex-1 h-[clamp(44px,4vw,60px)] text-[clamp(12px,1.2vw,16px)]
-                      border-[2.5px] border-white rounded-[clamp(8px,1vw,10px)]
-                      bg-transparent text-[#f4f4f4] text-center font-medium px-[10px]"
+               class="voucher flex-1 h-12 text-sm
+                      border-2 border-white rounded-lg
+                      bg-transparent text-[#f4f4f4] text-center font-medium px-3"
                placeholder="VOUCHER CODE">
 
         <div class="total flex-1 bg-[#ff4200] text-white font-bold
-                    h-[clamp(44px,4vw,60px)] rounded-[clamp(8px,1vw,10px)] 
-                    flex items-center justify-center gap-[2px] text-[clamp(12px,1.2vw,16px)]">
+                    h-12 rounded-lg 
+                    flex items-center justify-center gap-0.5 text-sm">
           TOTAL: <span id="totalValue" class="font-extrabold">$0.00</span>
         </div>
 
       </div>
 
-     <a href="checkout_tail.html" class="checkout-btn
-    bg-[#00e676] text-white font-bold text-[16px] rounded-[12px]
-    py-[14px] h-[66px] mt-[10px] mb-[10px] flex items-center justify-center
-    hover:bg-white hover:text-[#00e676]">
-  Checkout
-</a>
+      <a href="checkout_tail.html" class="checkout checkout-btn
+        bg-[#00e676] text-white font-bold text-base rounded-xl
+        py-3.5 h-16 mt-2.5 mb-2.5 flex items-center justify-center
+        hover:bg-white hover:text-[#00e676]">
+        Checkout
+      </a>
 
-      <button class="paypal group bg-white text-[#283D81] font-bold text-[16px] border border-[#211033]
-                     h-[70px] rounded-[12px] cursor-pointer flex items-center justify-center gap-[8px]
+      <button class="paypal group bg-white text-[#283D81] font-bold text-base border border-[#211033]
+                     h-16 rounded-xl cursor-pointer flex items-center justify-center gap-2
                      transition hover:bg-[#009cde] hover:text-white">
-  Checkout with 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-       class="h-[21px] transition group-hover:invert group-hover:brightness-0">
-</button>
+        Checkout with 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+             class="h-5 transition group-hover:invert group-hover:brightness-0">
+      </button>
 
 
     </div>
@@ -348,7 +333,6 @@
     function computeCartTotal() {
       let total = 0;
       document.querySelectorAll(".item").forEach(item => {
-        // read price from data-price attribute (must exist)
         const price = parseFloat(item.getAttribute("data-price")) || 0;
         const qty = parseInt(item.querySelector(".qty").textContent, 10) || 0;
         total += price * qty;
