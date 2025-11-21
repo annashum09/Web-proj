@@ -8,50 +8,27 @@
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    /* Apple Pay*/
-    .applePayBtn:hover .appleLogo {
-      filter: invert(1);
-    }
-
-    /* Google Pay*/
-    .googlePayBtn:hover .googleLogo {
-      filter: brightness(0) invert(1);
-    }
-
-    /* Текст білий при hover */
-    .applePayBtn:hover .appleText,
-    .googlePayBtn:hover .googleText {
-      color: white;
-    }
-  </style>
-
 </head>
 
-<body class="bg-white text-black">
+<body class="bg-[#ffffff] text-[#000000] font-['Montserrat',_sans-serif]">
 
   <div class="max-w-5xl mx-auto px-4 py-10 relative">
 
-    <!-- BACK BUTTON без px у класах -->
+    <!-- BACK BUTTON -->
     <button
       type="button"
       aria-label="Back to cart"
       class="fixed top-6 left-6 w-7 h-7 bg-[#f7f7f7] rounded-lg
              flex items-center justify-center text-xl cursor-pointer transition
              leading-none
-             hover:bg-[#bebebe] hover:text-white z-50 shadow-sm"
+             hover:bg-[#bebebe] hover:text-[#ffffff] z-50 shadow-sm"
       onclick="window.location.href='cart_tail.html'">
       <i class="fi fi-rr-angle-small-left"></i>
     </button>
 
     <!-- LOGO -->
     <div class="flex justify-center mb-9">
-      <div class="w-28 h-28 bg-[#74F9A0] rounded-full flex flex-col items-center justify-center text-white font-bold text-xl">
+      <div class="w-28 h-28 bg-[#74F9A0] rounded-full flex flex-col items-center justify-center text-[#ffffff] font-bold text-xl">
         <span>Chenso</span><span>shop</span>
       </div>
     </div>
@@ -65,50 +42,56 @@
 
         <h2 class="text-xl font-semibold">Customer Information</h2>
         <div class="space-y-3">
-          <input type="text" placeholder="First Name" class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none" />
-          <input type="text" placeholder="Last Name" class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none" />
-          <input type="tel" placeholder="Phone Number" class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none" />
-          <input type="email" placeholder="Email Address" class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none" />
+          <input type="text" placeholder="First Name" class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none" />
+          <input type="text" placeholder="Last Name" class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none" />
+          <input type="tel" placeholder="Phone Number" class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none" />
+          <input type="email" placeholder="Email Address" class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none" />
         </div>
 
         <h2 class="text-xl font-semibold pt-4">Shipping</h2>
         <div class="space-y-3">
-          <select class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none">
+          <select class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none">
             <option>Postal Service — Pickup Point</option>
             <option>Courier Delivery</option>
             <option>Standard Post</option>
           </select>
-          <input type="text" placeholder="City" class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none" />
-          <input type="text" placeholder="Address / Pickup Point" class="w-full h-14 px-4 rounded-xl bg-gray-100 text-black outline-none" />
+          <input type="text" placeholder="City" class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none" />
+          <input type="text" placeholder="Address / Pickup Point" class="w-full h-14 px-4 rounded-xl bg-[#f3f4f6] text-[#000000] outline-none" />
         </div>
 
         <h2 class="text-xl font-semibold pt-4">Payment</h2>
         <div class="space-y-3">
 
           <!-- Pay with Card -->
-          <div class="bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center cursor-pointer
-            transition duration-150 hover:bg-[#2b2b2b] hover:text-white active:scale-95">
+          <div class="bg-[#d1d5db] text-[#000000] font-bold rounded-xl h-14 flex items-center justify-center cursor-pointer
+            transition duration-150 hover:bg-[#2b2b2b] hover:text-[#ffffff] active:scale-95">
             Pay with Card
           </div>
 
           <!-- Apple Pay -->
-          <div class="applePayBtn bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center gap-2 cursor-pointer
-            transition duration-150 hover:bg-black active:scale-95">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="h-5 appleLogo" alt="Apple logo">
-            <span class="appleText">Apple Pay</span>
+          <div class="applePayBtn group bg-[#d1d5db] text-[#000000] font-bold rounded-xl h-14 flex items-center justify-center gap-2 cursor-pointer
+            transition duration-150 hover:bg-[#000000] active:scale-95">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
+              class="h-5 group-hover:invert" 
+              alt="Apple logo">
+            <span class="group-hover:text-[#ffffff]">Apple Pay</span>
           </div>
 
           <!-- Google Pay -->
-          <div class="googlePayBtn bg-gray-300 text-black font-bold rounded-xl h-14 flex items-center justify-center cursor-pointer
-            transition duration-150 hover:bg-blue-500 active:scale-95">
-            <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" class="h-7 googleLogo" alt="Google Pay logo">
-            <span class="googleText">Google Pay</span>
+          <div class="googlePayBtn group bg-[#d1d5db] text-[#000000] font-bold rounded-xl h-14 flex items-center justify-center cursor-pointer
+            transition duration-150 hover:bg-[#3b82f6] active:scale-95">
+            <img 
+              src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" 
+              class="h-7 group-hover:brightness-0 group-hover:invert" 
+              alt="Google Pay logo">
+            <span class="group-hover:text-[#ffffff]">Google Pay</span>
           </div>
 
         </div>
 
-        <button class="w-full h-14 bg-black text-white font-bold rounded-xl mt-6 transition
-                       hover:bg-white hover:text-black hover:shadow-lg active:scale-95">
+        <button class="w-full h-14 bg-[#000000] text-[#ffffff] font-bold rounded-xl mt-6 transition
+                       hover:bg-[#ffffff] hover:text-[#000000] hover:shadow-lg active:scale-95">
           Confirm Order
         </button>
 
@@ -116,7 +99,7 @@
 
       <!-- RIGHT SUMMARY -->
       <div>
-        <div class="rounded-3xl p-6 space-y-6 bg-[#211033] text-white">
+        <div class="rounded-3xl p-6 space-y-6 bg-[#211033] text-[#ffffff]">
           <h2 class="text-xl font-bold mb-4">Your Order</h2>
 
           <div class="space-y-4">
@@ -124,42 +107,42 @@
             <div class="flex items-center gap-4">
               <img src="https://m.media-amazon.com/images/I/61zPdK3k2rL._AC_SX679_.jpg" class="w-16 h-16 rounded-xl" alt="Video Camera">
               <div class="flex-1">
-                <p class="font-semibold">Video Camera</p>
-                <p class="text-sm text-white/90">Code #247890 | Quantity:1</p>
+                <p class="font-semibold text-[#ffffff]">Video Camera</p>
+                <p class="text-sm text-[#ffffffb3]">Code #247890 | Quantity:1</p>
               </div>
-              <p class="font-semibold">$849.90</p>
+              <p class="font-semibold text-[#ffffff]">$849.90</p>
             </div>
 
             <div class="flex items-center gap-4">
               <img src="https://wafuu.com/cdn/shop/products/sony-walkman-s-series-4gb-mp3-player-with-bluetooth-nw-s313-black-229654_1080x.jpg?v=1706145115" class="w-16 h-16 rounded-xl" alt="Walkman">
               <div class="flex-1">
-                <p class="font-semibold">Walkman</p>
-                <p class="text-sm text-white/70">Code #367381 | Quantity: 1</p>
+                <p class="font-semibold text-[#ffffff]">Walkman</p>
+                <p class="text-sm text-[#ffffffb3]">Code #367381 | Quantity: 1</p>
               </div>
-              <p class="font-semibold">$249.90</p>
+              <p class="font-semibold text-[#ffffff]">$249.90</p>
             </div>
 
             <div class="flex items-center gap-4">
               <img src="https://vinylsound.ca/cdn/shop/products/VINYLSOUND-TECHNICS_SL1210G_GRAND_CLASS_REFERENCE_DIRECT_DRIVE_TURNTABLE_1600x.jpg?v=1656337135" class="w-16 h-16 rounded-xl" alt="Turntable">
               <div class="flex-1">
-                <p class="font-semibold">Turntable</p>
-                <p class="text-sm text-white/70">Code #589001 | Quantity: 1</p>
+                <p class="font-semibold text-[#ffffff]">Turntable</p>
+                <p class="text-sm text-[#ffffffb3]">Code #589001 | Quantity: 1</p>
               </div>
-              <p class="font-semibold">$1449.90</p>
+              <p class="font-semibold text-[#ffffff]">$1449.90</p>
             </div>
 
             <div class="flex items-center gap-4">
               <img src="https://ktr.com.au/wp-content/uploads/2014/08/7950-black-1000x1000.jpg" class="w-16 h-16 rounded-xl" alt="Pager">
               <div class="flex-1">
-                <p class="font-semibold">Pager</p>
-                <p class="text-sm text-white/70">Code #567190 | Quantity: 1</p>
+                <p class="font-semibold text-[#ffffff]">Pager</p>
+                <p class="text-sm text-[#ffffffb3]">Code #567190 | Quantity: 1</p>
               </div>
-              <p class="font-semibold">$99.90</p>
+              <p class="font-semibold text-[#ffffff]">$99.90</p>
             </div>
 
           </div>
 
-          <div class="h-px bg-white/20 my-4"></div>
+          <div class="h-px bg-[#ffffff33] my-4"></div>
 
           <div class="flex justify-between text-lg font-semibold">
             <span>Total</span>
